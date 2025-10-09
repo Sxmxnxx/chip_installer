@@ -34,28 +34,22 @@
       </div>
     </section>  -->
 
-    <section id="main">
-      <div class="container">
-          <img src="./assets/mainpic.jpg" alt="pic">
-          <h2 class="main-title">IDFDFDFDFDF</h2>
-          <h3 class="main-sub">ㅇㄹㅇㄹㅇㄹㅇ</h3>
-          <p class="main-desc">ㄹㅇㄹㅇㄹㅇㄹㅇㄹ</p>
-          <ul class="actions">
-            <li>
-              <a class="button" href="https://github.com/Sxmxnxx/chip_installer/releases/download/v1.0.0/CHIP-1.0.0-arm64.dmg.zip" download>
-              <i class="fa-brands fa-apple"></i> macOS Installer
-              </a>
-            </li>
-            <li>
-              <a class="button" :href="winLink" download>
-                <i class="fa-brands fa-windows"></i> Windows Installer
-              </a>
-            </li>
-          </ul>
-      
-      </div>
-    </section> 
-
+<section id="main">
+  <div class="container">
+    <img class="main-img" src="./assets/mainpic.jpg" alt="pic" />
+    <h2 class="main-title">IDFDFDFDFDF</h2>
+    <h3 class="main-sub">I MEAN ISN'T IT POSSIBLE?</h3>
+    <p class="main-desc">Phasell</p>
+    <ul class="actions">
+      <li>
+        <a class="button" href="https://github.com/Sxmxnxx/chip_installer/releases/download/v1.0.0/CHIP-1.0.0-arm64.dmg.zip">macOS Installer</a>
+      </li>
+      <li>
+        <a class="button" href="...">Windows Installer</a>
+      </li>
+    </ul>
+  </div>
+</section>
     <!-- Footer Section -->
     <section id="footer">
       <div class="container">
@@ -90,24 +84,7 @@
 
 
 <style scoped>
-  #main .main-left {
-    flex: 0 0 40%;
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-  }
 
-  #main .main-left img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-  }
 
-  #main .main-right {
-    flex: 0 0 60%;
-    padding: 0 2rem;
-    flex-wrap: wrap;
-    text-align: right;
-  }
 
 </style>
