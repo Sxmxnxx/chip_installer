@@ -9,47 +9,23 @@
     </section>
 
     <!-- Main Section -->
-    <!-- <section id="main">
+    <section id="main">
       <div class="container">
-        <div class="main-left">
-          <img src="./assets/mainpic.jpg" alt="pic">
-        </div>
-        <div class="main-right">
-          <h2 class="main-title">IDFDFDFDFDF</h2>
-          <h3 class="main-sub">ㅇㄹㅇㄹㅇㄹㅇ</h3>
-          <p class="main-desc">ㄹㅇㄹㅇㄹㅇㄹㅇㄹ</p>
-          <ul class="actions">
-            <li>
-              <a class="button" href="https://github.com/Sxmxnxx/chip_installer/releases/download/v1.0.0/CHIP-1.0.0-arm64.dmg.zip" download>
-                <i class="fa-brands fa-apple"></i> macOS Installer
-              </a>
-            </li>
-            <li>
-              <a class="button" :href="winLink" download>
-                <i class="fa-brands fa-windows"></i> Windows Installer
-              </a>
-            </li>
-          </ul>
-        </div>
+        <img class="main-img" src="./assets/mainpic.jpg" alt="pic" />
+        <h2 class="main-title">IDFDFDFDFDF</h2>
+        <h3 class="main-sub">I MEAN ISN'T IT POSSIBLE?</h3>
+        <p class="main-desc">Phasell</p>
+        <ul class="actions">
+          <li>
+            <a class="button" href="https://github.com/Sxmxnxx/chip_installer/releases/download/v1.0.0/CHIP-1.0.0-arm64.dmg.zip">macOS Installer</a>
+          </li>
+          <li>
+            <a class="button" href="...">Windows Installer</a>
+          </li>
+        </ul>
       </div>
-    </section>  -->
+    </section>
 
-<section id="main">
-  <div class="container">
-    <img class="main-img" src="./assets/mainpic.jpg" alt="pic" />
-    <h2 class="main-title">IDFDFDFDFDF</h2>
-    <h3 class="main-sub">I MEAN ISN'T IT POSSIBLE?</h3>
-    <p class="main-desc">Phasell</p>
-    <ul class="actions">
-      <li>
-        <a class="button" href="https://github.com/Sxmxnxx/chip_installer/releases/download/v1.0.0/CHIP-1.0.0-arm64.dmg.zip">macOS Installer</a>
-      </li>
-      <li>
-        <a class="button" href="...">Windows Installer</a>
-      </li>
-    </ul>
-  </div>
-</section>
     <!-- Footer Section -->
     <section id="footer">
       <div class="container">
