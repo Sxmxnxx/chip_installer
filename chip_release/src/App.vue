@@ -20,7 +20,7 @@
           <p class="main-desc">ㄹㅇㄹㅇㄹㅇㄹㅇㄹ</p>
           <ul class="actions">
             <li>
-              <a class="button" :href="macLink" download>
+              <a class="button" href="https://github.com/Sxmxnxx/chip_installer/releases/download/v1.0.0/CHIP-1.0.0-arm64.dmg.zip" download>
                 <i class="fa-brands fa-apple"></i> macOS Installer
               </a>
             </li>
@@ -32,7 +32,7 @@
           </ul>
         </div>
       </div>
-    </section> -->
+    </section>  -->
 
     <section id="main">
       <div class="container">
@@ -42,8 +42,8 @@
           <p class="main-desc">ㄹㅇㄹㅇㄹㅇㄹㅇㄹ</p>
           <ul class="actions">
             <li>
-              <a class="button" :href="macLink" download>
-                <i class="fa-brands fa-apple"></i> macOS Installer
+              <a class="button" href="https://github.com/Sxmxnxx/chip_installer/releases/download/v1.0.0/CHIP-1.0.0-arm64.dmg.zip" download>
+              <i class="fa-brands fa-apple"></i> macOS Installer
               </a>
             </li>
             <li>
@@ -54,7 +54,7 @@
           </ul>
       
       </div>
-    </section>
+    </section> 
 
     <!-- Footer Section -->
     <section id="footer">
@@ -86,8 +86,6 @@
 </template>
 
 <script setup>
-const macLink = '/downloads/CHIP-0.1.0-arm64.dmg.zip'
-// const winLink = '/downloads/chip-win.exe'
 </script>
 
 
