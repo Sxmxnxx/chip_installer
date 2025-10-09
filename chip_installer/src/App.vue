@@ -11,7 +11,10 @@
     <!-- Main Section -->
     <section id="main">
       <div class="container">
-        <img class="main-img" src="./assets/mainpic.jpg" alt="pic" />
+        <img 
+          class="main-img" 
+          :src="images[currentIndex]"
+          alt="pic" />
         <h2 class="main-title">IDFDFDFDFDF</h2>
         <h3 class="main-sub">I MEAN ISN'T IT POSSIBLE?</h3>
         <p class="main-desc">Phasell</p>
@@ -56,6 +59,24 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+
+const images = Object.values(
+  import.meta.glob('./assets/mainpic*.png', { eager: true, import: 'default' })
+)
+
+const currentIndex = ref(0)
+let intervalId = null
+
+onMounted(() => {
+  intervalId = setInterval(() => {
+    currentIndex.value = (currentIndex.value + 1) % images.length
+  }, 2000)
+})
+
+onUnmounted(() => {
+  clearInterval(intervalId)
+})
 </script>
 
 
