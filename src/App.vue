@@ -11,11 +11,6 @@
     <!-- Main Section -->
     <section id="main">
       <div class="container">
-        <img 
-          class="main-img" 
-          :src="images[currentIndex]"
-          alt="pic" />
-        <!-- <h2 class="main-title">IDFDFDFDFDF</h2> -->
         <ul class="actions">
           <li>
             <a class="button" href="https://github.com/Sxmxnxx/chip_installer/releases/download/macOS_v1.0.0/CHIP-1.0.0-arm64.dmg.zip"><i class="fa-brands fa-apple"></i> macOS Installer</a>
@@ -24,8 +19,13 @@
             <a class="button" href="https://github.com/Sxmxnxx/chip_installer/releases/download/Windows_v1.0.0/CHIP-1.0.0.zip"><i class="fa-brands fa-windows"></i> Windows Installer</a>
           </li>
         </ul>
-        <!-- <h3 class="main-sub">What is CHIP?</h3>
-        <p class="main-desc">Phasell</p> -->
+        <img 
+          class="main-img" 
+          :src="images[currentIndex]"
+          alt="pic" />
+        <!-- <h2 class="main-title">IDFDFDFDFDF</h2> -->
+        <h3 class="main-sub">What is CHIP?</h3>
+        <p class="main-desc">xattr -r -d com.apple.quarantine /Applications/CHIP.app 안내ㄱㄱ</p>
 
       </div>
     </section>
