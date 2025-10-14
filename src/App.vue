@@ -26,7 +26,7 @@
         <!-- <h2 class="main-title">IDFDFDFDFDF</h2> -->
         <h3 class="main-sub">What is CHIP?</h3>
         <p class="main-desc">xattr -r -d com.apple.quarantine /Applications/CHIP.app 안내ㄱㄱ</p>
-
+        <p>dsfdsfdsf</p>
       </div>
     </section>
 
