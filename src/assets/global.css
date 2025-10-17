@@ -103,6 +103,11 @@ ul.actions li {
   background: #fd887a;
 }
 
+.main-title {
+  text-align: left;
+  margin-bottom: 1.5em;
+}
+
 .main-sub {
   font-size: 1.13em;
   color: #777;
