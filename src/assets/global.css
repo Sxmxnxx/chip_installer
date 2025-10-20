@@ -221,3 +221,7 @@ ul.actions li {
   margin-left: 3em;
   font-size: 1em;
 }
+
+.notice {
+  text-align: center;
+}

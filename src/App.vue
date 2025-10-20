@@ -19,6 +19,7 @@
             <a class="button" href="https://github.com/Sxmxnxx/chip_installer/releases/download/Windows_v1.0.0/CHIP_1.0.0.tar"><i class="fa-brands fa-windows"></i> Windows Installer</a>
           </li>
         </ul>
+        <p class="comment notice">※ please follow the guide to complete the installation!</p>
         <img 
           class="main-img" 
           :src="images[currentIndex]"
