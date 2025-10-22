@@ -64,7 +64,7 @@
                     </li>
                     <li>
                       <i class="fa-brands fa-github"></i>
-                      <a>배포본 깃 완성되면 추가</a>
+                      <a>https://github.com/Sxmxnxx/CHIP_v1</a>
                     </li>
                   </ul>
               </div>
