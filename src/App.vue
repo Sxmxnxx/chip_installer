@@ -13,7 +13,8 @@
       <div class="container">
         <ul class="actions">
           <li>
-            <a class="button" href="https://github.com/Sxmxnxx/chip_installer/releases/download/macOS_v1.0.0/CHIP-1.0.0-arm64.dmg.zip"><i class="fa-brands fa-apple"></i> macOS Installer</a>
+            <!-- <a class="button" href="https://github.com/Sxmxnxx/chip_installer/releases/download/macOS_v1.0.0/CHIP-1.0.0-arm64.dmg.zip"><i class="fa-brands fa-apple"></i> macOS Installer</a> -->
+            <a class="button" href="https://github.com/Sxmxnxx/chip_installer/releases/download/macOS_v1.0.0/CHIP-1.0.0-arm64.dmg"><i class="fa-brands fa-apple"></i> macOS Installer</a>
           </li>
           <li>
             <a class="button" href="https://github.com/Sxmxnxx/chip_installer/releases/download/Windows_v1.0.0/CHIP_1.0.0.tar"><i class="fa-brands fa-windows"></i> Windows Installer</a>
