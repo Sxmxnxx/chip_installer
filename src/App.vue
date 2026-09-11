@@ -1,81 +1,109 @@
 <template>
-  <div>
-    <!-- Title Section -->
-    <section id="title">
-      <div class="container">
-        <h1 id="logo"><a>CHIP Installer</a></h1>
-        <p>geo<strong>CH</strong>ronology <strong>I</strong>nteractive <strong>P</strong>ersonal database</p>
-      </div>
-    </section>
+  <main class="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Desktop database application</p>
+          <h1>CHIP</h1>
+          <p class="subtitle">
+            Geochronology Interactive Personal Database
+          </p>
+          <p class="description">
+            Manage reference information, sample records, age data, and analysis value files
+            in one structured desktop workspace.
+          </p>
 
-    <!-- Main Section -->
-    <section id="main">
-      <div class="container">
-        <ul class="actions">
-          <li>
-            <!-- <a class="button" href="https://github.com/Sxmxnxx/chip_installer/releases/download/macOS_v1.0.0/CHIP-1.0.0-arm64.dmg.zip"><i class="fa-brands fa-apple"></i> macOS Installer</a> -->
-            <a class="button" href="https://github.com/Sxmxnxx/chip_installer/releases/download/macOS_v1.0.0/CHIP-1.0.0-arm64.dmg"><i class="fa-brands fa-apple"></i> macOS Installer</a>
-          </li>
-          <li>
-            <!-- <a class="button" href="https://github.com/Sxmxnxx/chip_installer/releases/download/Windows_v1.0.0/CHIP_1.0.0.tar"><i class="fa-brands fa-windows"></i> Windows Installer</a> -->
-            <a class="button" href="https://github.com/Sxmxnxx/chip_installer/releases/download/Windows_v1.0.0/CHIP.Setup.1.0.0.exe"><i class="fa-brands fa-windows"></i> Windows Installer</a>
-          </li>
-        </ul>
-        <p class="comment notice">※ please follow the guide to complete the installation!</p>
-        <img 
-          class="main-img" 
-          :src="images[currentIndex]"
-          alt="pic" />
-        
+          <div class="download-actions">
+            <a class="button primary"
+              href="https://github.com/Sxmxnxx/chip_installer/releases/download/macOS_v1.0.0/CHIP-1.0.0-arm64.dmg">
+              <i class="fa-brands fa-apple"></i>
+              Download for macOS
+            </a>
+            <a class="button secondary"
+              href="https://github.com/Sxmxnxx/chip_installer/releases/download/Windows_v1.0.0/CHIP.Setup.1.0.0.exe">
+              <i class="fa-brands fa-windows"></i>
+              Download for Windows
+            </a>
+          </div>
 
+          <p class="hero-note">
+            Follow the installation guide below if your system blocks the app on first launch.
+          </p>
+        </div>
 
-        <h2 class="main-title">Installer Guide</h2>
-        <p class="main-sub">🍎 For macOS Users </p>
-        <p class="main-desc">1. Download the macOS installer file.</p>
-        <p class="main-desc">2. After installation, open the Terminal and enter the following command:</p>
-        <code class="code-style">xattr -r -d com.apple.quarantine /Applications/CHIP.app </code>
-        <p class="main-desc">3. You can now run the CHIP app without any issues!</p>
-        <p class="comment">※ If the app is blocked from running, please make sure to enter the command above.</p><br/><br/>
-        <p class="main-sub"><i class="fa-brands fa-windows" style="color: #0078D6;"></i> For Windows Users </p>
-        <p class="main-desc">1. Download the Windows installer file.</p>
-        <p class="main-desc">2. Extract the downloaded CHIP_1.0.0.tar file</p>
-        <p class="main-desc method-style"><span style="font-weight: bold;">Method 1:</span> Right-click the file and select "Extract".</p>
-        <p class="main-desc method-style"><span style="font-weight: bold;">Method 2:</span> Open Command Prompt(CMD) and run the following command:</p>
-        <p class="comment">※ navigate to the folder where the tar file is saved: <span>cd [path]</span></p>
-        <code class="code-style">tar -zxvf CHIP_1.0.0.tar</code>
-        <p class="main-desc">3. In the extracted folder, run the CHIP app!</p>
-        <p class="comment">※ You can also use extraction programs such as 7-Zip or Bandizip.</p>
-
-      </div>
-    </section>
-
-    <!-- Footer Section -->
-    <section id="footer">
-      <div class="container">
-        <header>
-          <h2>Questions or comments? <strong>Get in touch:</strong></h2>
-        </header>
-        <div class="row">
-          
-            <section>
-              <div class="row">              
-                  <ul class="icons">
-                    <li>
-                      <i class="fa-solid fa-envelope"></i>
-                      <a>chipproject.contact@gmail.com</a>
-                    </li>
-                    <li>
-                      <i class="fa-brands fa-github"></i>
-                      <a>https://github.com/Sxmxnxx/CHIP_v1</a>
-                    </li>
-                  </ul>
-              </div>
-            </section>
-          
+        <div class="hero-media">
+          <img class="app-preview" :src="images[currentIndex]" alt="CHIP application preview" />
         </div>
       </div>
     </section>
-  </div>
+
+    <section class="features">
+      <div class="container">
+        <h2>Built for research data management</h2>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Reference</h3>
+            <p>Import and manage publication metadata using DOI-based workflows.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Sample Data</h3>
+            <p>Organize sample name, material, location, taxon, method, and related fields.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Age & Analysis</h3>
+            <p>Connect age records with analysis value files through structured templates.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="install-guide">
+      <div class="container">
+        <h2>Installer Guide</h2>
+
+        <div class="guide-grid">
+          <article class="guide-card">
+            <h3><i class="fa-brands fa-apple"></i> macOS</h3>
+            <ol>
+              <li>Download the macOS installer file.</li>
+              <li>Install CHIP in the Applications folder.</li>
+              <li>If macOS blocks the app, run the command below in Terminal.</li>
+            </ol>
+            <code>xattr -r -d com.apple.quarantine /Applications/CHIP.app</code>
+          </article>
+
+          <article class="guide-card">
+            <h3><i class="fa-brands fa-windows"></i> Windows</h3>
+            <ol>
+              <li>Download the Windows installer file.</li>
+              <li>Run the installer or extract the downloaded file if required.</li>
+              <li>Open CHIP from the installed folder or shortcut.</li>
+            </ol>
+            <p class="guide-note">
+              You can use extraction tools such as 7-Zip or Bandizip if needed.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>Questions or comments?</p>
+        <div class="footer-links">
+          <a href="mailto:chipproject.contact@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+            chipproject.contact@gmail.com
+          </a>
+          <a href="https://github.com/Sxmxnxx/CHIP_v1">
+            <i class="fa-brands fa-github"></i>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </footer>
+  </main>
 </template>
 
 <script setup>
@@ -99,9 +127,3 @@ onUnmounted(() => {
 })
 </script>
 
-
-<style scoped>
-
-
-
-</style>
