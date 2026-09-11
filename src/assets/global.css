@@ -134,10 +134,12 @@ body {
   border-radius: 6px;
 }
 
-.features,
+.features {
+    padding: 56px 0 28px;
+}
+
 .install-guide {
-  padding: 56px 0;
-  background: #fff;
+    padding: 28px 0 56px;
 }
 
 .features h2,
