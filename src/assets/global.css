@@ -134,9 +134,19 @@ body {
   border-radius: 6px;
 }
 
-.features,
+/* .features,
 .install-guide {
   padding: 56px 0;
+  background: #fff;
+} */
+
+.features {
+  padding-top: 56px 0;
+  background: #fff;
+}
+
+.install-guide {
+  padding-bottom: 56px 0;
   background: #fff;
 }
 
