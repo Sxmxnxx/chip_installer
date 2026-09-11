@@ -134,25 +134,15 @@ body {
   border-radius: 6px;
 }
 
-/* .features,
+.features,
 .install-guide {
   padding: 56px 0;
-  background: #fff;
-} */
-
-.features {
-  padding-top: 56px 0;
-  background: #fff;
-}
-
-.install-guide {
-  padding-bottom: 56px 0;
   background: #fff;
 }
 
 .features h2,
 .install-guide h2 {
-  margin: 0 0 24px;
+  margin: 0 0 12px;
   color: #0f172a;
   font-size: 1.7rem;
 }
