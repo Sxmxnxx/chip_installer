@@ -72,6 +72,11 @@ body {
   font-weight: 700;
 }
 
+.subtitle span {
+    color: #c8554d;
+    font-weight: 900;
+}
+
 .description {
   max-width: 520px;
   margin-top: 16px;

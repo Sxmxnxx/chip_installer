@@ -6,7 +6,7 @@
           <p class="eyebrow">Desktop database application</p>
           <h1>CHIP</h1>
           <p class="subtitle">
-            Geochronology Interactive Personal Database
+            geo<span>CH</span>ronology <span>I</span>nteractive <span>P</span>ersonal database
           </p>
           <p class="description">
             Manage reference information, sample records, age data, and analysis value files
@@ -27,7 +27,7 @@
           </div>
 
           <p class="hero-note">
-            Follow the installation guide below if your system blocks the app on first launch.
+            Follow the guide below if your system blocks CHIP on first launch.
           </p>
         </div>
 
@@ -39,9 +39,9 @@
 
     <section class="features">
       <div class="container">
-        <h2>Built for research data management</h2>
+        <h2>Connect research records in one personal database</h2>
 
-        <div class="feature-grid">
+        <!-- <div class="feature-grid">
           <article class="feature-card">
             <h3>Reference</h3>
             <p>Import and manage publication metadata using DOI-based workflows.</p>
@@ -54,7 +54,32 @@
             <h3>Age & Analysis</h3>
             <p>Connect age records with analysis value files through structured templates.</p>
           </article>
+        </div> -->
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Reference</h3>
+            <p>
+              Start from publication metadata and connect each reference to related sample and age records.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Sample Data</h3>
+            <p>
+              Organize sample information with material, location, taxon, method, and linked reference data.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Age & Analysis</h3>
+            <p>
+              Attach age records and analysis value files to build a traceable geochronology dataset.
+            </p>
+          </article>
         </div>
+
+
       </div>
     </section>
 
@@ -126,4 +151,3 @@ onUnmounted(() => {
   clearInterval(intervalId)
 })
 </script>
-
