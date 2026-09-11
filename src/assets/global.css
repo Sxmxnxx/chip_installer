@@ -136,10 +136,12 @@ body {
 
 .features {
     padding: 56px 0 28px;
+    background: #fff;
 }
 
 .install-guide {
     padding: 28px 0 56px;
+    background: #fff;
 }
 
 .features h2,
