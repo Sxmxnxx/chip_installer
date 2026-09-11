@@ -13,13 +13,39 @@
             in one structured desktop workspace.
           </p>
 
-          <div class="download-actions">
+          <!-- <div class="download-actions">
             <a class="button primary"
               href="https://github.com/Sxmxnxx/chip_installer/releases/download/macOS_v1.0.0/CHIP-1.0.0-arm64.dmg">
               <i class="fa-brands fa-apple"></i>
               Download for macOS
             </a>
             <a class="button secondary"
+              href="https://github.com/Sxmxnxx/chip_installer/releases/download/Windows_v1.0.0/CHIP.Setup.1.0.0.exe">
+              <i class="fa-brands fa-windows"></i>
+              Download for Windows
+            </a>
+          </div> -->
+
+          <!-- <a class="button" :class="userOS === 'mac' ? 'primary' : 'secondary'"
+            href="https://github.com/Sxmxnxx/chip_installer/releases/download/macOS_v1.0.0/CHIP-1.0.0-arm64.dmg">
+            <i class="fa-brands fa-apple"></i>
+            Download for macOS
+          </a>
+
+          <a class="button" :class="userOS === 'windows' ? 'primary' : 'secondary'"
+            href="https://github.com/Sxmxnxx/chip_installer/releases/download/Windows_v1.0.0/CHIP.Setup.1.0.0.exe">
+            <i class="fa-brands fa-windows"></i>
+            Download for Windows
+          </a> -->
+
+          <div class="download-actions">
+            <a class="button" :class="userOS === 'mac' ? 'primary' : 'secondary'"
+              href="https://github.com/Sxmxnxx/chip_installer/releases/download/macOS_v1.0.0/CHIP-1.0.0-arm64.dmg">
+              <i class="fa-brands fa-apple"></i>
+              Download for macOS
+            </a>
+
+            <a class="button" :class="userOS === 'windows' ? 'primary' : 'secondary'"
               href="https://github.com/Sxmxnxx/chip_installer/releases/download/Windows_v1.0.0/CHIP.Setup.1.0.0.exe">
               <i class="fa-brands fa-windows"></i>
               Download for Windows
@@ -40,21 +66,6 @@
     <section class="features">
       <div class="container">
         <h2>Connect research records in one personal database</h2>
-
-        <!-- <div class="feature-grid">
-          <article class="feature-card">
-            <h3>Reference</h3>
-            <p>Import and manage publication metadata using DOI-based workflows.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Sample Data</h3>
-            <p>Organize sample name, material, location, taxon, method, and related fields.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Age & Analysis</h3>
-            <p>Connect age records with analysis value files through structured templates.</p>
-          </article>
-        </div> -->
 
         <div class="feature-grid">
           <article class="feature-card">
@@ -134,6 +145,23 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
+const userOS = ref('unknown')
+
+onMounted(() => {
+  const platform = navigator.platform.toLowerCase()
+  const userAgent = navigator.userAgent.toLowerCase()
+
+  if (platform.includes('mac')) {
+    userOS.value = 'mac'
+  } else if (platform.includes('win') || userAgent.includes('windows')) {
+    userOS.value = 'windows'
+  }
+
+  intervalId = setInterval(() => {
+    currentIndex.value = (currentIndex.value + 1) % images.length
+  }, 2000)
+})
+
 const images = Object.values(
   import.meta.glob('./assets/mainpic*.png', { eager: true, import: 'default' })
 )
@@ -141,11 +169,6 @@ const images = Object.values(
 const currentIndex = ref(0)
 let intervalId = null
 
-onMounted(() => {
-  intervalId = setInterval(() => {
-    currentIndex.value = (currentIndex.value + 1) % images.length
-  }, 2000)
-})
 
 onUnmounted(() => {
   clearInterval(intervalId)

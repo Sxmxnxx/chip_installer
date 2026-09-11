@@ -23,13 +23,6 @@ img {
     max-width: 100%;
 }
 
-body {
-  margin: 0;
-  background: #f5f7fa;
-  color: #1f2933;
-  font-family: 'Source Sans 3', system-ui, sans-serif;
-}
-
 .container {
   width: min(1120px, calc(100% - 40px));
   margin: 0 auto;
