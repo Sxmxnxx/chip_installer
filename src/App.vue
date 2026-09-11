@@ -13,31 +13,6 @@
             in one structured desktop workspace.
           </p>
 
-          <!-- <div class="download-actions">
-            <a class="button primary"
-              href="https://github.com/Sxmxnxx/chip_installer/releases/download/macOS_v1.0.0/CHIP-1.0.0-arm64.dmg">
-              <i class="fa-brands fa-apple"></i>
-              Download for macOS
-            </a>
-            <a class="button secondary"
-              href="https://github.com/Sxmxnxx/chip_installer/releases/download/Windows_v1.0.0/CHIP.Setup.1.0.0.exe">
-              <i class="fa-brands fa-windows"></i>
-              Download for Windows
-            </a>
-          </div> -->
-
-          <!-- <a class="button" :class="userOS === 'mac' ? 'primary' : 'secondary'"
-            href="https://github.com/Sxmxnxx/chip_installer/releases/download/macOS_v1.0.0/CHIP-1.0.0-arm64.dmg">
-            <i class="fa-brands fa-apple"></i>
-            Download for macOS
-          </a>
-
-          <a class="button" :class="userOS === 'windows' ? 'primary' : 'secondary'"
-            href="https://github.com/Sxmxnxx/chip_installer/releases/download/Windows_v1.0.0/CHIP.Setup.1.0.0.exe">
-            <i class="fa-brands fa-windows"></i>
-            Download for Windows
-          </a> -->
-
           <div class="download-actions">
             <a class="button" :class="userOS === 'mac' ? 'primary' : 'secondary'"
               href="https://github.com/Sxmxnxx/chip_installer/releases/download/macOS_v1.0.0/CHIP-1.0.0-arm64.dmg">
