@@ -26,7 +26,7 @@
       "changes": []
     },
     "package": {
-      "url": "https://github.com/Sxmxnxx/chip_installer/releases/tag/admin-database-1.0.1",
+      "url": "https://github.com/Sxmxnxx/chip_installer/releases/download/admin-database-1.0.1/admin-database-1.0.1.zip",
       "sha256": "334d8cea8d063a3a3468ddb21edaa9c21760e943ca3b3fbd1ed6d2c201302093",
       "sizeBytes": "74056468"
     }
