@@ -18,14 +18,18 @@
     }
   },
   "adminDatabase": {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "minAppVersion": "1.0.0",
     "releaseNotes": {
-      "title": "Admin Database 1.0.0",
-      "summary": "Initial administrative database release.",
+      "title": "Admin Database 1.0.1",
+      "summary": "New admin database available!",
       "changes": []
     },
-    "package": null
+    "package": {
+      "url": "https://github.com/Sxmxnxx/chip_installer/releases/tag/admin-database-1.0.1",
+      "sha256": "334d8cea8d063a3a3468ddb21edaa9c21760e943ca3b3fbd1ed6d2c201302093",
+      "sizeBytes": "74056468"
+    }
   },
   "previousReleases": []
 }
