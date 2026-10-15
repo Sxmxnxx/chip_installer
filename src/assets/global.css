@@ -85,6 +85,38 @@ img {
   margin-top: 28px;
 }
 
+.release-meta {
+  margin-top: 24px;
+}
+
+.release-label {
+  color: #64748b;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.release-version {
+  margin-top: 3px;
+  color: #1f2933;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.release-version span {
+  margin-left: 8px;
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.release-summary {
+  margin-top: 2px;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -111,6 +143,66 @@ img {
   margin-top: 14px;
   color: #718096;
   font-size: 0.92rem;
+}
+
+.release-history {
+  width: min(100%, 520px);
+  margin-top: 18px;
+  border-top: 1px solid #d8e0ea;
+}
+
+.release-history summary {
+  padding: 12px 0;
+  color: #334155;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.release-history-list {
+  display: grid;
+  gap: 10px;
+  padding-bottom: 4px;
+}
+
+.release-history-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 14px;
+  border: 1px solid #d8e0ea;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.release-history-version {
+  color: #1f2933;
+  font-weight: 800;
+}
+
+.release-history-database,
+.release-history-summary {
+  color: #64748b;
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.release-history-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.release-history-actions a {
+  color: #b94842;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.release-history-actions a:hover {
+  text-decoration: underline;
 }
 
 .hero-media {
@@ -242,6 +334,16 @@ img {
   .button {
     justify-content: center;
     width: 100%;
+  }
+
+  .release-version span {
+    display: block;
+    margin: 2px 0 0;
+  }
+
+  .release-history-item {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .footer-inner {

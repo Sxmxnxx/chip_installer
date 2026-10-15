@@ -13,19 +13,49 @@
             in one structured desktop workspace.
           </p>
 
-          <div class="download-actions">
-            <a class="button" :class="userOS === 'mac' ? 'primary' : 'secondary'"
-              href="https://github.com/Sxmxnxx/chip_installer/releases/download/macOS_v1.0.0/CHIP-1.0.0-arm64.dmg">
+          <div v-if="releaseManifest" class="release-meta">
+            <p class="release-label">Latest release</p>
+            <p class="release-version">
+              CHIP {{ releaseManifest.app.version }}
+              <span>Includes Admin Database {{ releaseManifest.app.seedAdminDatabaseVersion }}</span>
+            </p>
+          </div>
+
+          <div v-if="latestDownloads" class="download-actions">
+            <a v-if="latestDownloads.macos?.url" class="button" :class="userOS === 'mac' ? 'primary' : 'secondary'"
+              :href="latestDownloads.macos.url">
               <i class="fa-brands fa-apple"></i>
               Download for macOS
             </a>
 
-            <a class="button" :class="userOS === 'windows' ? 'primary' : 'secondary'"
-              href="https://github.com/Sxmxnxx/chip_installer/releases/download/Windows_v1.0.0/CHIP.Setup.1.0.0.exe">
+            <a v-if="latestDownloads.windows?.url" class="button" :class="userOS === 'windows' ? 'primary' : 'secondary'"
+              :href="latestDownloads.windows.url">
               <i class="fa-brands fa-windows"></i>
               Download for Windows
             </a>
           </div>
+
+          <p v-else-if="!manifestLoaded" class="hero-note">Loading latest release…</p>
+          <p v-else class="hero-note">The latest installer is not available yet.</p>
+
+          <details v-if="previousReleases.length" class="release-history">
+            <summary>Previous releases</summary>
+            <div class="release-history-list">
+              <article v-for="release in previousReleases" :key="releaseKey(release)" class="release-history-item">
+                <div>
+                  <p class="release-history-version">CHIP {{ release.appVersion }}</p>
+                  <p class="release-history-database">Includes Admin Database {{ release.seedAdminDatabaseVersion }}</p>
+                  <p v-if="release.releaseNotes?.summary" class="release-history-summary">
+                    {{ release.releaseNotes.summary }}
+                  </p>
+                </div>
+                <div class="release-history-actions">
+                  <a v-if="release.downloads?.macos?.url" :href="release.downloads.macos.url">macOS</a>
+                  <a v-if="release.downloads?.windows?.url" :href="release.downloads.windows.url">Windows</a>
+                </div>
+              </article>
+            </div>
+          </details>
 
           <p class="hero-note">
             Follow the guide below if your system blocks CHIP on first launch.
@@ -118,11 +148,19 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
 
 const userOS = ref('unknown')
+const releaseManifest = ref(null)
+const manifestLoaded = ref(false)
 
-onMounted(() => {
+const latestDownloads = computed(() => releaseManifest.value?.app?.downloads ?? null)
+const previousReleases = computed(() => {
+  const releases = releaseManifest.value?.previousReleases
+  return Array.isArray(releases) ? releases : []
+})
+
+onMounted(async () => {
   const platform = navigator.platform.toLowerCase()
   const userAgent = navigator.userAgent.toLowerCase()
 
@@ -132,10 +170,31 @@ onMounted(() => {
     userOS.value = 'windows'
   }
 
+  await loadReleaseManifest()
+
   intervalId = setInterval(() => {
     currentIndex.value = (currentIndex.value + 1) % images.length
   }, 2000)
 })
+
+async function loadReleaseManifest() {
+  try {
+    const response = await fetch('/release-manifest.json', { cache: 'no-store' })
+    if (!response.ok) {
+      throw new Error(`Manifest request failed: ${response.status}`)
+    }
+
+    releaseManifest.value = await response.json()
+  } catch (error) {
+    console.error('Failed to load release manifest:', error)
+  } finally {
+    manifestLoaded.value = true
+  }
+}
+
+function releaseKey(release) {
+  return `${release.appVersion}-${release.seedAdminDatabaseVersion}`
+}
 
 const images = Object.values(
   import.meta.glob('./assets/mainpic*.png', { eager: true, import: 'default' })

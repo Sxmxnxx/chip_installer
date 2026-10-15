@@ -1,0 +1,31 @@
+{
+  "manifestVersion": 1,
+  "app": {
+    "version": "1.0.0",
+    "seedAdminDatabaseVersion": "1.0.0",
+    "releaseNotes": {
+      "title": "CHIP 1.0.0",
+      "summary": "Initial CHIP application release.",
+      "changes": []
+    },
+    "downloads": {
+      "macos": {
+        "url": "https://github.com/Sxmxnxx/chip_installer/releases/download/macOS_v1.0.0/CHIP-1.0.0-arm64.dmg"
+      },
+      "windows": {
+        "url": "https://github.com/Sxmxnxx/chip_installer/releases/download/Windows_v1.0.0/CHIP.Setup.1.0.0.exe"
+      }
+    }
+  },
+  "adminDatabase": {
+    "version": "1.0.0",
+    "minAppVersion": "1.0.0",
+    "releaseNotes": {
+      "title": "Admin Database 1.0.0",
+      "summary": "Initial administrative database release.",
+      "changes": []
+    },
+    "package": null
+  },
+  "previousReleases": []
+}
