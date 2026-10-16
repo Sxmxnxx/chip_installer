@@ -22,7 +22,6 @@
     "minAppVersion": "1.0.0",
     "releaseNotes": {
       "title": "Admin Database 1.0.1",
-      "summary": "New admin database available!",
       "changes": []
     },
     "package": {
