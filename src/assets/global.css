@@ -145,66 +145,6 @@ img {
   font-size: 0.92rem;
 }
 
-.release-history {
-  width: min(100%, 520px);
-  margin-top: 18px;
-  border-top: 1px solid #d8e0ea;
-}
-
-.release-history summary {
-  padding: 12px 0;
-  color: #334155;
-  cursor: pointer;
-  font-size: 0.95rem;
-  font-weight: 700;
-}
-
-.release-history-list {
-  display: grid;
-  gap: 10px;
-  padding-bottom: 4px;
-}
-
-.release-history-item {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 12px 14px;
-  border: 1px solid #d8e0ea;
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.7);
-}
-
-.release-history-version {
-  color: #1f2933;
-  font-weight: 800;
-}
-
-.release-history-database,
-.release-history-summary {
-  color: #64748b;
-  font-size: 0.86rem;
-  line-height: 1.45;
-}
-
-.release-history-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  white-space: nowrap;
-}
-
-.release-history-actions a {
-  color: #b94842;
-  font-size: 0.9rem;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.release-history-actions a:hover {
-  text-decoration: underline;
-}
-
 .hero-media {
   padding: 12px;
   border: 1px solid #d8e0ea;
@@ -219,35 +159,24 @@ img {
   border-radius: 6px;
 }
 
-.features {
-    padding: 56px 0 28px;
-    background: #fff;
-}
-
 .install-guide {
-    padding: 28px 0 56px;
+    padding: 56px 0 40px;
     background: #fff;
 }
 
-.features h2,
-.install-guide h2 {
+.install-guide h2,
+.previous-releases h2 {
   margin: 0 0 12px;
   color: #0f172a;
   font-size: 1.7rem;
 }
 
-.feature-grid,
 .guide-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
-}
-
-.guide-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.feature-card,
 .guide-card {
   padding: 22px;
   border: 1px solid #e1e7ef;
@@ -255,13 +184,11 @@ img {
   background: #fff;
 }
 
-.feature-card h3,
 .guide-card h3 {
   margin: 0 0 10px;
   color: #182230;
 }
 
-.feature-card p,
 .guide-card li,
 .guide-note {
   color: #5f6c7b;
@@ -277,6 +204,69 @@ img {
   background: #f1f5f9;
   color: #334155;
   font-size: 0.9rem;
+}
+
+.previous-releases {
+  padding: 0 0 56px;
+  background: #fff;
+}
+
+.previous-releases h2 {
+  margin-bottom: 16px;
+}
+
+.release-history-list {
+  display: grid;
+  gap: 10px;
+}
+
+.release-history-head,
+.release-history-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.4fr) minmax(115px, auto) minmax(115px, auto);
+  gap: 12px;
+  align-items: center;
+}
+
+.release-history-head {
+  padding: 0 18px 2px;
+  color: #64748b;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.release-history-head span:last-child {
+  grid-column: 3 / 5;
+  text-align: center;
+}
+
+.release-history-item {
+  padding: 14px 18px;
+  border: 1px solid #e1e7ef;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.release-history-version {
+  color: #1f2933;
+  font-weight: 800;
+}
+
+.release-history-database {
+  color: #64748b;
+  font-size: 0.92rem;
+}
+
+.release-history-download {
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 12px;
+  white-space: nowrap;
+}
+
+.release-history-unavailable {
+  color: #94a3b8;
+  text-align: center;
 }
 
 .footer {
@@ -312,13 +302,31 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .feature-grid,
   .guide-grid {
     grid-template-columns: 1fr;
   }
 
   .hero-media {
     order: -1;
+  }
+}
+
+@media (max-width: 700px) {
+  .release-history-head {
+    display: none;
+  }
+
+  .release-history-item {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .release-history-version,
+  .release-history-database {
+    grid-column: 1 / -1;
+  }
+
+  .release-history-download {
+    width: 100%;
   }
 }
 
@@ -339,11 +347,6 @@ img {
   .release-version span {
     display: block;
     margin: 2px 0 0;
-  }
-
-  .release-history-item {
-    align-items: flex-start;
-    flex-direction: column;
   }
 
   .footer-inner {

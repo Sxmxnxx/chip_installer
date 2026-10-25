@@ -38,25 +38,6 @@
           <p v-else-if="!manifestLoaded" class="hero-note">Loading latest release…</p>
           <p v-else class="hero-note">The latest installer is not available yet.</p>
 
-          <details v-if="previousReleases.length" class="release-history">
-            <summary>Previous releases</summary>
-            <div class="release-history-list">
-              <article v-for="release in previousReleases" :key="releaseKey(release)" class="release-history-item">
-                <div>
-                  <p class="release-history-version">CHIP {{ release.appVersion }}</p>
-                  <p class="release-history-database">Includes Admin Database {{ release.seedAdminDatabaseVersion }}</p>
-                  <p v-if="release.releaseNotes?.summary" class="release-history-summary">
-                    {{ release.releaseNotes.summary }}
-                  </p>
-                </div>
-                <div class="release-history-actions">
-                  <a v-if="release.downloads?.macos?.url" :href="release.downloads.macos.url">macOS</a>
-                  <a v-if="release.downloads?.windows?.url" :href="release.downloads.windows.url">Windows</a>
-                </div>
-              </article>
-            </div>
-          </details>
-
           <p class="hero-note">
             Follow the guide below if your system blocks CHIP on first launch.
           </p>
@@ -65,37 +46,6 @@
         <div class="hero-media">
           <img class="app-preview" :src="images[currentIndex]" alt="CHIP application preview" />
         </div>
-      </div>
-    </section>
-
-    <section class="features">
-      <div class="container">
-        <h2>Connect research records in one personal database</h2>
-
-        <div class="feature-grid">
-          <article class="feature-card">
-            <h3>Reference</h3>
-            <p>
-              Start from publication metadata and connect each reference to related sample and age records.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <h3>Sample Data</h3>
-            <p>
-              Organize sample information with material, location, taxon, method, and linked reference data.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <h3>Age & Analysis</h3>
-            <p>
-              Attach age records and analysis value files to build a traceable geochronology dataset.
-            </p>
-          </article>
-        </div>
-
-
       </div>
     </section>
 
@@ -124,6 +74,39 @@
             <p class="guide-note">
               You can use extraction tools such as 7-Zip or Bandizip if needed.
             </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section v-if="previousReleases.length" class="previous-releases">
+      <div class="container">
+        <h2>Previous releases</h2>
+        <div class="release-history-list">
+          <div class="release-history-head" aria-hidden="true">
+            <span>CHIP version</span>
+            <span>Included Admin Database</span>
+            <span>Downloads</span>
+          </div>
+          <article v-for="release in previousReleases" :key="releaseKey(release)" class="release-history-item">
+            <span class="release-history-version">CHIP {{ release.appVersion }}</span>
+            <span class="release-history-database">Admin Database {{ release.seedAdminDatabaseVersion }}</span>
+            <a v-if="release.downloads?.macos?.url" class="button release-history-download"
+              :class="userOS === 'mac' ? 'primary' : 'secondary'"
+              :aria-label="`Download CHIP ${release.appVersion} for macOS`"
+              :href="release.downloads.macos.url">
+              <i class="fa-brands fa-apple" aria-hidden="true"></i>
+              macOS
+            </a>
+            <span v-else class="release-history-unavailable">—</span>
+            <a v-if="release.downloads?.windows?.url" class="button release-history-download"
+              :class="userOS === 'windows' ? 'primary' : 'secondary'"
+              :aria-label="`Download CHIP ${release.appVersion} for Windows`"
+              :href="release.downloads.windows.url">
+              <i class="fa-brands fa-windows" aria-hidden="true"></i>
+              Windows
+            </a>
+            <span v-else class="release-history-unavailable">—</span>
           </article>
         </div>
       </div>
