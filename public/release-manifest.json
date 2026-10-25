@@ -35,7 +35,7 @@
     "appVersion": "1.0.0",
     "seedAdminDatabaseVersion": "1.0.0",
     "releaseNotes": {
-      "summary": "Initial CHIP release."
+      "summary": ""
     },
     "downloads": {
       "macos": {
@@ -44,6 +44,17 @@
       "windows": {
         "url": "https://github.com/Sxmxnxx/chip_installer/releases/download/Windows_v1.0.0/CHIP.Setup.1.0.0.exe"
       }
+    }
+  },
+  {
+    "appVersion": "1.0.0",
+    "seedAdminDatabaseVersion": "1.0.1",
+    "releaseNotes": {
+      "summary": ""
+    },
+    "downloads": {
+      "macos": { "url": "https://example.com/CHIP-1.0.0.dmg" },
+      "windows": { "url": "https://example.com/CHIP-1.0.0.exe" }
     }
   }
   ]
