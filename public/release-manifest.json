@@ -30,5 +30,21 @@
       "sizeBytes": "74056468"
     }
   },
-  "previousReleases": []
+  "previousReleases": [
+    {
+    "appVersion": "1.0.0",
+    "seedAdminDatabaseVersion": "1.0.0",
+    "releaseNotes": {
+      "summary": "Initial CHIP release."
+    },
+    "downloads": {
+      "macos": {
+        "url": "https://github.com/Sxmxnxx/chip_installer/releases/download/macOS_v1.0.0/CHIP-1.0.0-arm64.dmg"
+      },
+      "windows": {
+        "url": "https://github.com/Sxmxnxx/chip_installer/releases/download/Windows_v1.0.0/CHIP.Setup.1.0.0.exe"
+      }
+    }
+  }
+  ]
 }
