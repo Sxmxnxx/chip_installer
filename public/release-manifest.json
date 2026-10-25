@@ -1,19 +1,19 @@
 {
   "manifestVersion": 1,
   "app": {
-    "version": "1.0.0",
-    "seedAdminDatabaseVersion": "1.0.0",
+    "version": "1.1.1",
+    "seedAdminDatabaseVersion": "1.0.1",
     "releaseNotes": {
-      "title": "CHIP 1.0.0",
-      "summary": "Initial CHIP application release.",
+      "title": "CHIP 1.1.1",
+      "summary": "App update notification test.",
       "changes": []
     },
     "downloads": {
       "macos": {
-        "url": "https://github.com/Sxmxnxx/chip_installer/releases/download/macOS_v1.0.0/CHIP-1.0.0-arm64.dmg"
+        "url": "https://chip-installer.netlify.app/"
       },
       "windows": {
-        "url": "https://github.com/Sxmxnxx/chip_installer/releases/download/Windows_v1.0.0/CHIP.Setup.1.0.0.exe"
+        "url": "https://chip-installer.netlify.app/"
       }
     }
   },
