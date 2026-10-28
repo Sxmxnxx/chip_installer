@@ -67,13 +67,13 @@
           <article class="guide-card">
             <h3><i class="fa-brands fa-windows"></i> Windows</h3>
             <ol>
-              <li>Download the Windows installer file.</li>
-              <li>Run the installer or extract the downloaded file if required.</li>
-              <li>Open CHIP from the installed folder or shortcut.</li>
+              <li>Download and run the Windows installer.</li>
+              <li>Follow the on-screen instructions to complete the installation.</li>
+              <li>When CHIP is launched for the first time, its database is automatically created in your Documents folder.</li>
             </ol>
-            <p class="guide-note">
+            <!-- <p class="guide-note">
               You can use extraction tools such as 7-Zip or Bandizip if needed.
-            </p>
+            </p> -->
           </article>
         </div>
       </div>
