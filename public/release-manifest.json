@@ -1,10 +1,10 @@
 {
   "manifestVersion": 1,
   "app": {
-    "version": "1.1.1",
-    "seedAdminDatabaseVersion": "1.0.1",
+    "version": "1.0.0",
+    "seedAdminDatabaseVersion": "1.0.0",
     "releaseNotes": {
-      "title": "CHIP 1.1.1",
+      "title": "CHIP 1.0.0",
       "summary": "App update notification test.",
       "changes": []
     },
