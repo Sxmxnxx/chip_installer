@@ -79,39 +79,6 @@
       </div>
     </section>
 
-    <section v-if="previousReleases.length" class="previous-releases">
-      <div class="container">
-        <h2>Previous releases</h2>
-        <div class="release-history-list">
-          <div class="release-history-head" aria-hidden="true">
-            <span>CHIP version</span>
-            <span>Included Admin Database</span>
-            <span>Downloads</span>
-          </div>
-          <article v-for="release in previousReleases" :key="releaseKey(release)" class="release-history-item">
-            <span class="release-history-version">CHIP {{ release.appVersion }}</span>
-            <span class="release-history-database">Admin Database {{ release.seedAdminDatabaseVersion }}</span>
-            <a v-if="release.downloads?.macos?.url" class="button release-history-download"
-              :class="userOS === 'mac' ? 'primary' : 'secondary'"
-              :aria-label="`Download CHIP ${release.appVersion} for macOS`"
-              :href="release.downloads.macos.url">
-              <i class="fa-brands fa-apple" aria-hidden="true"></i>
-              macOS
-            </a>
-            <span v-else class="release-history-unavailable">—</span>
-            <a v-if="release.downloads?.windows?.url" class="button release-history-download"
-              :class="userOS === 'windows' ? 'primary' : 'secondary'"
-              :aria-label="`Download CHIP ${release.appVersion} for Windows`"
-              :href="release.downloads.windows.url">
-              <i class="fa-brands fa-windows" aria-hidden="true"></i>
-              Windows
-            </a>
-            <span v-else class="release-history-unavailable">—</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <footer class="footer">
       <div class="container footer-inner">
         <p>Questions or comments?</p>
@@ -138,10 +105,7 @@ const releaseManifest = ref(null)
 const manifestLoaded = ref(false)
 
 const latestDownloads = computed(() => releaseManifest.value?.app?.downloads ?? null)
-const previousReleases = computed(() => {
-  const releases = releaseManifest.value?.previousReleases
-  return Array.isArray(releases) ? releases : []
-})
+
 
 onMounted(async () => {
   const platform = navigator.platform.toLowerCase()
@@ -173,10 +137,6 @@ async function loadReleaseManifest() {
   } finally {
     manifestLoaded.value = true
   }
-}
-
-function releaseKey(release) {
-  return `${release.appVersion}-${release.seedAdminDatabaseVersion}`
 }
 
 const images = Object.values(

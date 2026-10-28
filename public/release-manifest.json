@@ -23,43 +23,10 @@
     "releaseNotes": {
       "title": "Admin Database 1.0.1",
       "changes": []
-    },
-    "package": {
-      "url": "https://github.com/Sxmxnxx/chip_installer/releases/download/admin-database-1.0.1/admin-database-1.0.1.zip",
-      "sha256": "334d8cea8d063a3a3468ddb21edaa9c21760e943ca3b3fbd1ed6d2c201302093",
-      "sizeBytes": "74056468"
     }
+
   },
   "previousReleases": [
-    {
-      "appVersion": "1.0.0",
-      "seedAdminDatabaseVersion": "1.0.1",
-      "releaseNotes": {
-        "summary": ""
-      },
-      "downloads": {
-        "macos": {
-          "url": "https://example.com/CHIP-1.0.0.dmg"
-        },
-        "windows": {
-          "url": "https://example.com/CHIP-1.0.0.exe"
-        }
-      }
-    },
-    {
-      "appVersion": "1.0.0",
-      "seedAdminDatabaseVersion": "1.0.0",
-      "releaseNotes": {
-        "summary": ""
-      },
-      "downloads": {
-        "macos": {
-          "url": "https://github.com/Sxmxnxx/chip_installer/releases/download/macOS_v1.0.0/CHIP-1.0.0-arm64.dmg"
-        },
-        "windows": {
-          "url": "https://github.com/Sxmxnxx/chip_installer/releases/download/Windows_v1.0.0/CHIP.Setup.1.0.0.exe"
-        }
-      }
-    }
+    
   ]
 }
